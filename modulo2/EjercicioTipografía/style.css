@@ -1,0 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Imperial+Script&family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Imperial+Script&family=Monsieur+La+Doulaise&display=swap');
+
+h2 {
+    font-family: "Barriecito";
+}
+
+main p {
+    font-family: "Funnel Sans";
+}
