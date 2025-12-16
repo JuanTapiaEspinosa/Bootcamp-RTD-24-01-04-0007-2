@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <title>Calculadora de Préstamo</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form action="">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 mx-auto">
+              <div class="card">
+                <div class="card-title text-center"><h1>Calculadora de Préstamo</h1></div>
+                <div id="resultadoPrestamo" class="card-body">
+ 
+                </div>
+                                 <div class="form-floating mb-3">
+                    <input
+                      type="number"
+                      min="0"
+                      step="1"
+                      class="form-control"
+                      id="montoPrestamo"
+                      placeholder="Monto del prestamo"
+                    />
+                    <label for="montoPrestamo">Monto a prestar</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="number"
+                      min="0"
+                      step="1"
+                      class="form-control"
+                      id="interesAnual"
+                      placeholder="Ingresa otro número"
+                    />
+                    <label for="interesAnual">Ingrese interés anual</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="number"
+                      min="0"
+                      step="1"
+                      class="form-control"
+                      id="cantidadMeses"
+                      placeholder="Ingresa cantidad de meses"
+                    />
+                    <label for="cantidadMeses">Ingresa cantidad de meses</label>
+                  </div>
+
+                  <button
+                    class="btn btn-primary w-100"
+                    type="button"
+                    id="btnCalcular"
+                  >
+                    Calcular Prestamo
+                  </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

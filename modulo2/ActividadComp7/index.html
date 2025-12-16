@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BecasSim</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Bienvenido a simulador de becas bootcamp</h1>
+        <p>
+          Un simulador de becas es una herramienta que permite ingresar tus
+          datos y ver a qué beneficios podrías postular. Te ayuda a estimar
+          montos, requisitos y posibilidades de obtener una beca. Sirve para
+          orientarte y tomar mejores decisiones antes de postular.
+        </p>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <form action="">
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="nombre"
+                  placeholder="Escribe tu nombre"
+                />
+                <label for="nombre">Nombres</label>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellidos"
+                  placeholder="Escribe tu apellido"
+                />
+                <label for="apellidos">Apellidos</label>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+                <label for="email">Email address</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  min="0"
+                  step="1"
+                  class="form-control"
+                  id="edad"
+                  placeholder="Ingresa tu edad"
+                />
+                <label for="edad">Edad</label>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <legend class="h5 mb-3">Seleccionar género</legend>
+              <div class="mb-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="genero"
+                    id="btn_masculino"
+                    checked
+                  />
+                  <label class="form-check-label" for="radioDefault2">
+                    Masculino
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="genero"
+                    id="btn_femenino"
+                  />
+                  <label class="form-check-label" for="radioDefault1">
+                    Femenino
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="genero"
+                    id="btn_otro"
+                  />
+                  <label class="form-check-label" for="radioDefault1">
+                    Otro
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <legend class="h5 mb-3">Ocupación actual</legend>
+              <div class="mb-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="ocupacionActual"
+                    id="btn_cesante"
+                    value="cesante"
+                    checked
+                  />
+                  <label class="form-check-label" for="btn_cesante">
+                    Cesante
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="ocupacionActual"
+                    id="btn_trabajador"
+                    value="trabajador"
+                  />
+                  <label class="form-check-label" for="btn_trabajador">
+                    Trabajando
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="ocupacionActual"
+                    id="btn_estudiante"
+                    value="estudiante"
+                  />
+                  <label class="form-check-label" for="btn_estudiante">
+                    Estudiante
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="ocupacionActual"
+                    id="btn_estudianteTrabajador"
+                    value="estudianteTrabajador"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="btn_estudianteTrabajador"
+                  >
+                    Estudiante Trabajador
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-4">
+                <label for="puntaje" class="form-label">Puntaje obtenido</label>
+                <input
+                  type="range"
+                  class="form-range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  id="puntaje"
+                />
+                <output
+                  for="puntaje"
+                  id="rangeValue"
+                  aria-hidden="true"
+                ></output>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="button" onclick="calcularBeca()">Calcular Beca</button>
+        </form>
+        <div
+          id="mensajeBecas"
+          style="margin-top: 10px; font-weight: bold"
+        ></div>
+      </section>
+    </main>
+    <footer class="fixed-bottom">
+      <div class="container">
+        <p>
+          &#x2139; Esta página es un trabajo práctico realizado durante un
+          bootcamp como parte de las actividades de la clase.
+        </p>
+      </div>
+      <script src="js/funcionalidades.js" defer></script>
+      <script src="js/range.js"></script>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Wallet - Enviar Dinero</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-dark">
+    <div class="d-flex">
+      <div class="container card bg-light">
+        <h2>Enviar Dinero</h2>
+        <form>
+          <div class="form-group">
+            <label for="searchContact"
+              >Buscar en la agenda de transferencias:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="searchContact"
+              placeholder="Buscar contacto"
+            />
+          </div>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary mt-2"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            Agregar nuevo contacto
+          </button>
+          <h3>Contactos</h3>
+          <div class="list-group">
+            <div id="contactList" class="btn-group-vertical" role="group">
+              <!--Aquí se cargan los datos de los clientes con JS-->
+              <!--
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio1"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-dark" for="btnradio1">
+                <span class="contact-name">John Doe</span>
+                <span class="contact-details"
+                  >CBU: 123456789, Alias: john.doe, Banco: ABC Bank</span
+                ></label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio2"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-dark" for="btnradio2">
+                <span class="contact-name">Jane Smith</span>
+                <span class="contact-details"
+                  >CBU: 987654321, Alias: jane.smith, Banco: XYZ Bank</span
+                >
+              </label>
+              -->
+            </div>
+
+            <a href="menu.html" class="btn btn-secondary m-2"
+              >Volver al Menú Principal</a
+            >
+          </div>
+        </form>
+      </div>
+      <div class="container card bg-light">
+        <h1>Monto a envíar</h1>
+        <div class="form-floating m-2">
+          <input
+            type="number"
+            class="form-control"
+            id="floatingInput-montoEnviar"
+            placeholder="Monto a Enviar"
+          />
+          <label for="floatingInput-montoEnviar">Monto</label>
+        </div>
+        <button id="btnEnviar" type="submit" class="btn btn-primary m-2">
+          Enviar dinero
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Agregar nuevo contacto
+            </h1>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="container">
+                <div class="row">
+                  <div class="form-floating m-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="floatingInput-name"
+                      placeholder="Nombre completo"
+                    />
+                    <label for="floatingInput-name">Nombre completo</label>
+                  </div>
+                  <div class="form-floating m-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="floatingInput-cbu"
+                      placeholder="CBU"
+                    />
+                    <label for="floatingInput-cbu">CBU</label>
+                  </div>
+                  <div class="form-floating m-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="floatingInput-alias"
+                      placeholder="Alias"
+                    />
+                    <label for="floatingInput-alias">Alias</label>
+                  </div>
+                  <div class="m-2">
+                    <select
+                      class="form-select form-select-lg mb-3"
+                      aria-label="Seleccione banco"
+                      id="banco"
+                    >
+                      <option selected>Seleccione Banco</option>
+                      <option value="ABC BANK">ABC BANK</option>
+                      <option value="XYZ BANK">XYZ BANK</option>
+                      <option value="MNO BANK">MNO BANK</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="btn-agregarContacto"
+                >
+                  Agregar contacto
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/saldo.js"></script>
+    <script src="js/contactos.js"></script>
+    <script src="js/sendmoney.js"></script>
+  </body>
+</html>
