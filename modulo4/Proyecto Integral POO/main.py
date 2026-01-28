@@ -38,3 +38,14 @@ resultado_dueno = edificio_santa_isabel.buscar_departamento("Camila Sánchez")
 print("\nBúsqueda por propietario 'Camila Sánchez':")
 for d in resultado_dueno:
     print(d)
+
+print("Valor UF actual de los departamentos: ")
+print(f"Valor UF departamento {departamento1.numero}: ${departamento1.uf}")  # UF: 39700
+print(f"Valor UF departamento {departamento2.numero}: ${departamento2.uf}")  # UF: 39700
+
+# Cambiar UF
+Departamento.cambiar_valor_uf(40000)
+
+print("Valor UF actual de los departamentos: ")
+print(f"Valor UF departamento {departamento1.numero}: ${departamento1.uf}")  # UF: 40000
+print(f"Valor UF departamento {departamento2.numero}: ${departamento2.uf}")  # UF: 40000
